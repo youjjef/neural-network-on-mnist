@@ -1,6 +1,6 @@
 import tensorflow as tf
 
-# Load the Fashion MNIST dataset
+# Load the MNIST dataset
 mnist = tf.keras.datasets.mnist
 (training_images, training_labels), (test_images, test_labels) = mnist.load_data()
 
@@ -13,7 +13,7 @@ model = tf.keras.models.Sequential([
     tf.keras.layers.Dense(10, activation='softmax')
 ])
 
-# Use same settings
+# compile model
 model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy'])
 
 # Train the model
